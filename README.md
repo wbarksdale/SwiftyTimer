@@ -20,4 +20,8 @@ print("or if you prefer a more manageable unit, stuff took \(myTimer.millisecond
 
 ## Swift Package Manger
 
-Add `SwiftyTimer` to your project by simply adding `.package(url: "https://github.com/wbarksdale/SwiftyTimer.git", from: "0.1.0")` to your Package dependencies.
+Add `SwiftyTimer` to your project by simply adding the following to your Package dependencies.
+
+```swift
+.package(url: "https://github.com/wbarksdale/SwiftyTimer.git", from: "0.1.0")
+``` 
