@@ -6,12 +6,14 @@
 #endif
 
 public struct SwiftyTimer {
+    public var isRunning: Bool = false
+    
     var startTime: UInt64 = 0
     var stopTime: UInt64 = 0
     let numer: UInt64
     let denom: UInt64
     
-    init() {
+    public init() {
         #if os(Linux)
             numer = 1
             denom = 1
@@ -24,6 +26,7 @@ public struct SwiftyTimer {
     }
     
     public mutating func start() {
+        isRunning = true
         #if os(Linux)
             var ts: timespec = timespec()
             clock_gettime(CLOCK_MONOTONIC, &ts)
@@ -34,6 +37,7 @@ public struct SwiftyTimer {
     }
     
     public mutating func stop() {
+        isRunning = false
         #if os(Linux)
             var ts: timespec = timespec()
             clock_gettime(CLOCK_MONOTONIC, &ts)
