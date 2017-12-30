@@ -1,6 +1,6 @@
 # SwiftyTimer
 
-Do you need to time something in swift? Do you want it to run on Linux and on macOS. Thats what I needed, and thats why I made SwiftyTimer.
+Do you need to time something in swift? Do you want it to run on Linux and on macOS. Thats what I needed, and thats why I made `SwiftyTimer`.
 
 
 ## Usage
@@ -17,3 +17,7 @@ myTimer.stop()
 print("stuff took \(myTimer.nanoseconds) nanoseconds to complete")
 print("or if you prefer a more manageable unit, stuff took \(myTimer.milliseconds) milliseconds to complete")
 ```
+
+## Swift Package Manger
+
+Add `SwiftyTimer` to your project by simply adding `.package(url: "https://github.com/wbarksdale/SwiftyTimer.git", from: "0.1.0")` to your Package dependencies.
